@@ -1,0 +1,22 @@
+spring:
+  application:
+      name: Authentication-services
+  datasource:
+      username: root
+      password: 
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/auth_db
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+  
+      
+server:
+  port: 9090
+  
+jwt:
+  secret: firmaSegreta
+  expiration: 7200
+  header: X-Token
